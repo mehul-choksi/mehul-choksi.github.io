@@ -1,0 +1,128 @@
+<html>
+
+	<head>
+		<title>Binary Search: Going beyond the search</title>
+		<link rel = "stylesheet" href="../article-style.css">
+
+		 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+	  <!-- Vendor CSS Files -->
+	  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+	  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+	  <!-- Template Main CSS File -->
+	  <link href="../assets/css/style.css" rel="stylesheet">
+
+	  <style>
+			* {
+				color : black;
+			}
+	  </style>	
+	</head>
+
+	<body>
+		<header id="header">
+			<div class="container">
+
+			  <div class="logo float-left">
+				<h1 class="text-light"><a href="index.html"><span>Mehul Choksi</span></a></h1>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			  </div>
+
+			  <nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+				  <li class="active"><a href="index.html">Home</a></li>
+
+				  <li><a href="#portfolio">Projects</a></li>
+				  <li class="drop-down"><a href="">Articles</a>
+				    <ul>
+				      <li><a href="#"> Data Structures and Algorithms</a></li>
+				      <li><a href="#">System Design</a></li>
+				      <li><a href="#">Cloud</a></li>
+				    </ul>
+				  </li>
+				  <li><a href="#contact">Contact Me</a></li>
+				</ul>
+			  </nav><!-- .nav-menu -->
+			</div>
+  		</header>
+
+	</body>
+
+	<div>
+		<br/><br/>
+		<center><h3 style="font-weight:bold;">Using Binary Search to solve optimization problems</h3></center>
+		<br/>
+		<div class="textbox" >
+
+			<center><img src="/home/ash/website/site/mehul-choksi.github.io/assets/img/articles/binary_search_header.png" style="width:50%;height:50%;"></center>
+			<br/>
+			<p>
+			Binary Search, is one of the first algorithms taught to computer science students. Its simplicity and efficacy serves as a prime example of how a carefully chosen algorithm can make a big impact on the performance of the application. Without being excessively verbose, here's a quick recap on binary search:
+			</p>
+			
+			Binary Search:
+			<ol>
+				<li>Is a Divide and Conquer algorithm</li>
+				<li>Runs in O(log n)</li>
+				<li>Requires array to be sorted</li>
+			</ol>
+
+			<p>Below is the implementation of binary search in Python. Due to some CORS issues, I'm unable to provide the feature to toggle the between Python/Java/Cpp. Because python is closest to natural language, this will the default choice throughout this blog. </p>
+
+			<div id="python-simple-binary-search">
+				<script src="http://gist-it.appspot.com/http://github.com/mehul-choksi/codes-for-site/blob/main/BinarySearch/Plain/binary_search.py"></script>
+     		</div>
+
+			<br/>
+
+			<h4 style="font-weight:bold;">Going beyond the traditional binary search: Binary search based optimization for monotones</h4>
+			<br/>
+			<center> <img src = "/home/ash/website/site/mehul-choksi.github.io/assets/img/articles/monotonic_illustration.png"> </center>
+			<p>
+			Binary search can be used for finding the optimal point in monotonic functions (decreasing throughout/increasing throughout).
+			The idea is similar to the traditional binary search, only this time, instead of an array, we have a monotonic function and a threshold on which we want to binary search. The idea is that we binary search across the domain of admissible values to get the minimum value which satisifies our requirements. 
+
+ 			Let's have a look at the strategy.
+			</p>
+
+			<script src="http://gist-it.appspot.com/https://github.com/mehul-choksi/codes-for-site/blob/main/Monotone/monotone-strategy.py"></script>
+			<br/><br/>
+			<h4 style="font-weight:bold;">Putting it together: Solving SPOJ's aggressive cows problem</h4>
+			<p> Link to the problem: <a href="https://www.spoj.com/problems/AGGRCOW/">SPOJ Aggressive Cows</a></p>
+
+			<p>It is recommended that before reading the content below, keeping the idea that we discussed above, give the problem a go.</p>
+			
+			<h5> Solution: </h5>
+			
+			<ol>
+				<li>In this problem, c is the threshold. </li>
+				<li>A gap variable, which tells the minimum admissible distance between the cows for the given iteration of computation. Our goal is to find the minimal gap value, such that acceptable cows >= c</li>
+				<li>Monotonic function. Let f(x,arr) be the function that counts the number of acceptable cows(cows that are atleast x units apart) in the sorted array. 
+				<br/>
+				If we have k acceptable cows in the array that are atleast x units apart from each other, you will, by nature have atleast k acceptable cows that are x-1 units apart.
+				<br/>
+				In other words, f(x,arr) <= f(x-1,arr) always holds. Thus, we can argue that f(x) is strictly a monotonically decreasing function.</li>
+				<li>Run binary search over this function to find the optimal x</li>
+			</ol>		
+
+			<h5> Code: </h5>
+			</br>
+			<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/Monotone/spojaggr.py"></script>	
+
+			<h5>Conclusion</h5>
+
+			<p>Binary search can often be used for problems that involve finding the most optimal solution, on a monotonic function. The running complexity of O(log n), without any additional space requirement, and its nature of being simple to implement makes it a frequently used algorithm in such situations.</p>
+		</div>
+	<div>
+
+	<script>
+			
+	</script>
+</html>
