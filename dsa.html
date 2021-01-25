@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("#myInput").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		console.log(value);
+		$("#searchables *").filter(function() {
+		  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	  });
+	});
+	</script>
+
+
+
+
+  <!-- Favicons -->
+  <!--link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mamba - v2.5.0
+  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+
+<body>
+
+	
+	
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="icofont-envelope"></i><a href="mailto:mehul.choksi98@gmail.com">mehul.choksi98@gmail.com</a>
+      </div>
+      <div class="social-links float-right">
+        <a href="https://www.linkedin.com/in/mehul-choksi-70b606184" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="https://www.facebook.com/mehul.choksi.37/" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="https://twitter.com/MehulChoksi98" class="twitter"><i class="icofont-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>Mehul Choksi</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+
+          <li><a href="#portfolio">Projects</a></li>
+          <li class="drop-down"><a href="">Articles</a>
+            <ul>
+              <li><a href="dsa.html"> Data Structures and Algorithms</a></li>
+              <li><a href="system-design.html">System Design</a></li>
+              <li><a href="cloud.html">Cloud</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+	
+	<form method = "POST">
+	<br/><br/>
+  <div class="inline-form">
+		<div class="form-group">
+		   <center>
+			<input id="myInput" type="text" class="form-control input-group-lg reg_name" placeholder ="Search for articles" style="width: 80%;">
+			</center>
+		 </div>   
+	</form>
+  <main id="main">
+
+   
+		
+      <div class="container">
+
+      <section class="about-lists">
+
+	
+
+      <div class="container" id="searchables">
+		<div> <!--class="animate__animated animate__fadeInUp"-->
+        <div class="row no-gutters">
+
+       
+		<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+		 <a href="binary_search.html">  
+            <span>01</span>
+            <h4>Binary Search: Searching optimal points on monotones</h4>
+            <p>Revisit binary search, and understand how it can be used it solving a class of optimization problems. Approach and code to SPOJ's most popular problem, aggressive cows is discussed as well.</p>
+		 </a>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+			<a href="dynamic_programming.html">
+            <span>02</span>
+            <h4>Dynamic Programming: Collection of classical problems</h4>
+            <p>Dynamic Programming is an algorithm paradigm that identifies the common overlapping problems and stores them into memory, to dramatically improve the speed of solving of problems.</p>
+			</a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+			<a href="linked_list.html">
+            <span>03</span>
+            <h4>Linked List</h4>
+            <p>A deep dive into the classic linked list. Starts from the scratch, build a elementary linked list.</p>
+			</a>
+          </div>
+        </div>
+
+		<div class="row no-gutters">
+			<div class="col-lg-4 col-md-6 content-item">
+		 <a href="binary_search.html">  
+            <span>04</span>
+            <h4>Graphs: Traversals and commonly used algorithms</h4>
+            <p>Introduces you to elementary graph traversal algorithms, such as dfs, bfs and dsu, after which problems related to the same are discussed.</p>
+		 </a>
+          </div>
+
+
+          <!--div class="col-lg-4 col-md-6 content-item">
+			<a href="dynamic_programming.html">
+            <span>05</span>
+            <h4>Asdfasdf</h4>
+            <p>Asdfasdf An algorithm paradigm that identifies the common overlapping problems and stores them into memory, to dramatically improve the speed of solving of problems.</p>
+			</a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item">
+			<a href="linked_list.html">
+            <span>06</span>
+            <h4>Hmmmm</h4>
+            <p>Hmmmm A deep dive into the classic linked list. Starts from the scratch, build a elementary linked list.</p>
+			</a>
+          </div-->
+        </div>
+		</div>
+
+		</div>
+      </div>
+    </section><!-- End About Lists Section -->
+
+	
+        
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  
+
+    <div class="container">
+      
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
+        <small>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></small>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
