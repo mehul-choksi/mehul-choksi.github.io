@@ -251,10 +251,13 @@
 
 		<h3>Putting DP into practice: Problem collection</h3><br>
 		<p>Note: If you're using python, using PyPy to submit on atcoder. Classic python gives tle even to the codes that have otherwise acceptable time complexities.</p>
-		<ol>
+	
+		<a href="https://atcoder.jp/contests/dp/tasks" _target="blank">Link to atcoder dp contest</a><br>
+		The above link is an excellent resource for dp practice, and I highly recommend checking it out.
+
+			<ol>
 			<li><h4>Frog A & B</h4></li>
-				<a href="https://atcoder.jp/contests/dp/tasks" _target="blank">Link to atcoder dp contest</a><br>
-				The above link contains the specified problems and other standard dp problems. It is an excellent resource for dp practice, and I highly recommend checking it out.
+				<a href="https://atcoder.jp/contests/dp/tasks/dp_a" _target="blank">Frog A </a><br>
 
 				Solution to Frog A:
 
@@ -274,6 +277,8 @@
 				<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/froga.py"></script>	
 			<br/>		
 			<p>
+				<a href="https://atcoder.jp/contests/dp/tasks/dp_b" _target="blank">Frog B </a><br>
+
 				Frog B is extremely similar to frog A, except for the fact that we will be dealing with upto n transitions.
 				<br/>
 				In other words, <b>dp[i] = min(dp[i], dp[i-1] + |h[i]-h[i-1]|, dp[i-2] + |h[i] - h[i-2]|, ... , dp[i-k] + |h[i] - h[i-k]|)</b>
@@ -286,6 +291,8 @@
 			</p>
 
 			<li><h4>AtCoder Vacation</h4></li>
+
+			<a href="https://atcoder.jp/contests/dp/tasks/dp_c" _target="blank">Frog B </a><br>
 
 			<p>The problem asks you to find the max 'fun' given that no same activity can be done in 2 consecutive days.</p>
 			Intuition: If activity a is done on day i, then activity that can be done on day i-1 can either be activity b or c.
@@ -310,7 +317,8 @@
 </li>
 			</ol>
 
-		<li>AtCoder D: Knapsack</li>
+		<li><h4>Knapsack 1 </h4></li>
+		<a href="https://atcoder.jp/contests/dp/tasks/dp_d" _target="blank">KnapSack 1 </a><br>
 		<p>This problem is the classical 0/1 Knapsack problem. Given a set of n items each with weight w[i] and value v[i], and a sack which can hold atmost weight of W, find the maximum value you can hold using the sack. </p>
 		
 		<p>Approach: There are 2 parameters that are crucial in determining the problem's outcome.</p>
@@ -359,7 +367,9 @@
 
 			<br/>
 
-			<li>AtCoder E: Knapsack 2</li>
+			<li><h4>AtCoder E: Knapsack 2</h4></li>
+				
+			<a href="https://atcoder.jp/contests/dp/tasks/dp_e" _target="blank">KnapSack 2 </a><br>
 
 			<p>This is a variant to the knapsack, where the constraints on weights are larger ~(10<sup>9</sup>). So, our previous solution, which uses weight as one the states will make the problem computationally infeasible. However, take note of the constraints of values. No value is greater than 10<sup>5</sup>, and the maximum number of items is 100. In other words, the <b>sum of all values cannot be larger than 10<sup>7</sup></b>. Now the problem reduces to reframing the question, to use the 'value' state: (ranges from 0 to sum of all values). </p>
 			
@@ -392,7 +402,9 @@
 
 			<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/knapsackb.py"></script>
 
-		<li>Longest Common Subsequence (LCS)</li>
+		<li><h4>Longest Common Subsequence (LCS)</h4></li>
+					
+		<a href="https://atcoder.jp/contests/dp/tasks/dp_f" _target="blank">LCS </a><br>
 		<p>Classic LCS: Given strings s and t, find out (any one) longest common subsequence. Our strategy will be to first build the table for the finding optimal length of lcs, and then using the table to pick the lcs.</p>
 
 		<br/> 
@@ -430,7 +442,8 @@
 
 		<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/lcs.py"></script>
 
-		<li>Longest Path</li>
+		<li><h4>Longest Path</h4></li>
+		<a href="https://atcoder.jp/contests/dp/tasks/dp_g" _target="blank">Longest Path </a><br>
 		<p>Given a Directed Acyclic Graph, find the length of the longest path.</p>
 
 		<p>This problem requires the second style of dynammic programming, memoization. We write a recursive code and memoize it using a single state dp array, which remembers the solutions to the subproblems, so that they are not recomputed. The main idea is to use dfs on all vertices seperately, and return the max length of the path which starts from that vertex. </p>
@@ -442,8 +455,8 @@
 
 		<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/longestpath.py"></script>
 		
-		<li>Grid 1</li>
-
+		<li><h4>Grid 1</h4></li>
+		<a href="https://atcoder.jp/contests/dp/tasks/dp_h" _target="blank">Grid 1 </a><br>
 		<p>Given a grid with connectable rooms and blocked rooms, find the number of ways to reach the destination h,w from start 1,1.</p>
 		
 		<ol>
@@ -465,7 +478,8 @@
 			Here's the implementation for the same: <br/>
 			<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/grid.py"></script>
 
-		<li>Coins</li>
+		<li><h4>Coins</h4></li>
+		<a href="https://atcoder.jp/contests/dp/tasks/dp_i" _target="blank">Coins </a><br>
 		<p>Given N coins and the probabilities of getting heads for each coins respectively, find the probability of getting more heads than tails. This is a nice introduction to probability dp problems. It's not really that different from a classic dp problem.</p>
 
 		<ol>
@@ -484,8 +498,8 @@
 
 		<script src="http://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/coins.py"></script>
 
-		<li>Final Problem: Sushi</li>
-
+		<li><h4>Final Problem: Sushi</h4></li>
+		<a href="https://atcoder.jp/contests/dp/tasks/dp_j" _target="blank">Sushi</a><br>
 		<p>This is difficult problem. The problem states that you are given n plates, where each plate is one of the 4 types of plates of sushis, plates with 3,2,1 and 0 sushis. You have to calculate the expected number of operations till all the plates are empty.</p>
 
 		<p>Observation 1: The plates belonging to the same category are identical. This means that <b>order does not matter. We only need to concerned with the counts of 3-plates,2-plates,1-plates, and 0-plates.</b></p>
@@ -495,14 +509,15 @@
 			<li>From Observation 1 and 2, we can see that the states needed are: 3-plates, 2-plates and 1 plates. <b>dp[i][j][k] represents the expected number of moves for i 3-plates, j 2-plates and k 1-plates.</b></li>
 			<li>Base case: dp[0][0][0] = 0</li>
 			<li>Transitions: <br/>
-				Case 1: 3-plate is picked. 1 sushi is eaten, the number of 3-plates reduce by 1, and the number of 2-plates increases by 1. This contributes to the term p3 * dp[i-1][j+1][k], where p3 is the probability of picking a 3-plate. <br>
+				Case 1: 3-plate is picked. 1 sushi is eaten, the <b>number of 3-plates reduce by 1, and the number of 2-plates increases by 1</b>. This contributes to the term <b>p3 * dp[i-1][j+1][k] </b>, where p3 is the probability of picking a 3-plate. <br><br>
 
-				Case 2: 2-plate is picked. 1 sushi is eaten, the number of 2-plates reduce by 1, and the number of 1-plates increases by 1. This contributes to the term p2 * dp[i][j-1][k+1], where p2 is the probability of picking a 2-plate. <br>
+				Case 2: 2-plate is picked. 1 sushi is eaten, the <b>number of 2-plates reduce by 1, and the number of 1-plates increases by 1</b>. This contributes to the term <b>p2 * dp[i][j-1][k+1]</b>, where p2 is the probability of picking a 2-plate. <br><br>
 
-				Case 3: 1-plate is picked. 1 sushi is eaten, the number of 1-plates reduce by 1, and the number of 0-plates increases by 1. This contributes to the term p1 * dp[i][j][k-1], where p1 is the probability of picking a 1-plate. <br>
+				Case 3: 1-plate is picked. 1 sushi is eaten, the <b>number of 1-plates reduce by 1, and the number of 0-plates increases by 1</b>. This contributes to the term <b>p1 * dp[i][j][k-1], where p1 is the probability of picking a 1-plate. <br><br>
 
-				Case 4: 0-plate is picked. No sushi is eaten, This contributes to the term p0 * dp[i][j][k], where p0 is the probability of picking a 0-plate. Because dp[i][j][k] is unknown, we can transpose this term to the LHS to work around this. Detailed explanation is in the  code.<br>
+				Case 4: 0-plate is picked. <b>No sushi is eaten, This contributes to the term p0 * dp[i][j][k], where p0 is the probability of picking a 0-plate. Because dp[i][j][k] is unknown, we can transpose this term to the LHS to work around this<b>. Detailed explanation is in the  code.<br><br>
 
+				* Always add 1, because no matter what the choice, one move is going to be made.
 			</li>
 			<li>Invalid state elimation: During a loop, if i+j+k > n, it is invalid. Further, if i+j+k = 0, it is a trivial state and can be skipped. </li>
 
