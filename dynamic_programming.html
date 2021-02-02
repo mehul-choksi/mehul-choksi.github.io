@@ -515,14 +515,14 @@
 
 				Case 3: 1-plate is picked. 1 sushi is eaten, the <b>number of 1-plates reduce by 1, and the number of 0-plates increases by 1</b>. This contributes to the term <b>p1 * dp[i][j][k-1], where p1 is the probability of picking a 1-plate. <br><br>
 
-				Case 4: 0-plate is picked. <b>No sushi is eaten, This contributes to the term p0 * dp[i][j][k], where p0 is the probability of picking a 0-plate. Because dp[i][j][k] is unknown, we can transpose this term to the LHS to work around this<b>. Detailed explanation is in the  code.<br><br>
+				Case 4: 0-plate is picked. <b>No sushi is eaten, This contributes to the term p0 * dp[i][j][k], where p0 is the probability of picking a 0-plate. Because dp[i][j][k] is unknown, we can transpose this term to the LHS to work around this</b>. Detailed explanation is in the  code.<br><br>
 
 				* Always add 1, because no matter what the choice, one move is going to be made.
 			</li>
-			<li>Invalid state elimation: During a loop, if i+j+k > n, it is invalid. Further, if i+j+k = 0, it is a trivial state and can be skipped. </li>
+			<li><b>Invalid state elimation: During a loop, if i+j+k > n, it is invalid, because the no valid state will have more than n plates.</b> Further, if i+j+k = 0, it is a trivial state and can be skipped. </li>
 
-			<li>Ordering: Looking at the transitions, 3-plates state is dependent on 2-plates state, 2-plates-state is dependent on 1-plate state. Therefore, subproblems should be ordered such that the 1-plates should be calculated first, followed by 2 plate-states, followed by 1-plate state.</li>
-
+			<li>Ordering: Looking at the transitions, <b>3-plates state is dependent on 2-plates state, 2-plates-state is dependent on 1-plate state. Therefore, subproblems should be ordered such that the 1-plates should be calculated first, followed by 2 plate-states, followed by 1-plate state.</b></li>
+			
 			<br/>
 		</ol>
 			Below is the implementation: <br/>
@@ -531,7 +531,7 @@
 		<br/>
 		<h3>Conclusion</h3>
 		
-		<p>In this article we talked about what dp is, the necessary theory behind it, followed by solving standard dp problems. At the end, I'd like to once again, emphasize the way of thinking in dp problems. To break it down, the flow goes like: Identify the problem is dp -> Come up with states and define the subproblems -> Come up with the transitions between the states and formulate the transition rules -> Observe the base cases and necessary constraints -> Implement. This requires some practice to get used to, but after solving a few problems, the whole process starts seeming more natural.</p>
+		<p>In this article we talked about what dp is, the necessary theory behind it, followed by solving standard dp problems. At the end, I'd like to once again, emphasize the way of thinking in dp problems. To break it down, the flow goes like: <b>Identify the problem is dp -> Come up with states and define the subproblems -> Come up with the transitions between the states and formulate the transition rules -> Observe the base cases and necessary constraints -> Implement.</b> This requires some practice to get used to, but after solving a few problems, the whole process starts seeming more natural.</p>
 		
 		</div>
         
