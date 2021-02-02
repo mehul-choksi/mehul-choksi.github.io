@@ -513,7 +513,7 @@
 
 				Case 2: 2-plate is picked. 1 sushi is eaten, the <b>number of 2-plates reduce by 1, and the number of 1-plates increases by 1</b>. This contributes to the term <b>p2 * dp[i][j-1][k+1]</b>, where p2 is the probability of picking a 2-plate. <br><br>
 
-				Case 3: 1-plate is picked. 1 sushi is eaten, the <b>number of 1-plates reduce by 1, and the number of 0-plates increases by 1</b>. This contributes to the term <b>p1 * dp[i][j][k-1], where p1 is the probability of picking a 1-plate. <br><br>
+				Case 3: 1-plate is picked. 1 sushi is eaten, the <b>number of 1-plates reduce by 1, and the number of 0-plates increases by 1</b>. This contributes to the term <b>p1 * dp[i][j][k-1]</b>, where p1 is the probability of picking a 1-plate. <br><br>
 
 				Case 4: 0-plate is picked. <b>No sushi is eaten, This contributes to the term p0 * dp[i][j][k], where p0 is the probability of picking a 0-plate. Because dp[i][j][k] is unknown, we can transpose this term to the LHS to work around this</b>. Detailed explanation is in the  code.<br><br>
 
