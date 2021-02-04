@@ -1481,3 +1481,52 @@ section {
 #footer .credits a {
   color: #9eccf4;
 }
+
+/*Added by me */
+
+.table-of-contents {
+
+	width: 60%;
+}
+
+.inner-toc{
+	background-color: white;
+	color: black;
+	margin-left: 30%;
+	width: 45%;
+	height: 500px;
+	font: Arial;
+	
+}
+
+.sub-list{
+	list-style-type:disc;
+	font-size: 13.5px;
+}
+
+.thick-line{
+	height:3px;
+	border:none;
+	color:#333;
+	background-color:#333;
+	width:90%;
+}
+
+.topic-header{
+	font-weight:bold;
+	float:left;
+	margin-left:15%;
+}
+
+.textbox {
+	width: 90%;
+	padding-left:10%;
+	padding-top: 20px;
+	font-family: Arial;
+	line-height: 2;
+	font-size: 18px;
+}
+
+.black-link{
+	color: black
+}
