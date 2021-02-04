@@ -30,50 +30,11 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Add this in all files except index.html -->	
   <style>
-		.table-of-contents {
-			/*height: 500px;*/
-			width: 60%;
-			/*opacity: 60%;*/
-		}
-
-		.inner-toc{
-			background-color: white;
-			color: black;
-			margin-left: 30%;
-			width: 45%;
-			height: 500px;
-			font: Arial;
-			
-		}
-
-		.sub-list{
-			list-style-type:disc;
-			font-size: 13.5px;
-		}
-
-		.thick-line{
-			height:3px;
-			border:none;
-			color:#333;
-			background-color:#333;
-			width:90%;
-		}
-
-		.topic-header{
-			font-weight:bold;
-			float:left;
-			margin-left:15%;
-		}
-
-		.textbox {
-			width: 90%;
-			padding-left:10%;
-			padding-top: 20px;
-			font-family: Arial;
-			line-height: 2;
-			font-size: 18px;
-		}
+	html {
+	  scroll-behavior: smooth;
+	}
   </style>
 
   <!-- =======================================================
@@ -84,11 +45,7 @@
   ======================================================== -->
 </head>
 
-
 <body>
-
-	
-	
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-none d-lg-block">
@@ -133,7 +90,7 @@
     </div>
   </header><!-- End Header -->
 
-	
+	<a href="#" class="back-to-top" style="display: inline;"><i class="icofont-simple-up"></i></a>
 
 		<center>
 		<div class="animate__animated animate__fadeInUp">
@@ -151,54 +108,66 @@
 					<center><hr class="thick-line"/></center>
 					<br/>
 					<ol style="text-align:left;">
-						<li>Introduction - What is DP?</li>
+						<a href="#introduction" class="black-link"><li>Introduction - What is DP?</li></a>
 						<ul class="sub-list">
-							<li>Why should I care about DP?</li>
-							<li>Optimal substructure property</li>
-							<li>Overlapping subproblems property</li>
-							<li>Memoization vs tabulation</li>
-							<li>Thinking in DP: Parameters, states and transitions</li>
+							<a href="#dp-importance" class="black-link"><li>Why should I care about DP?</li></a>
+							<a href="#optimal-substructure" class="black-link"><li>Optimal substructure property</li></a>
+							<a href="#overlapping-subproblems" class="black-link"><li>Overlapping subproblems property</li></a>
+							<a href="#memoization-vs-tabulation" class="black-link"><li>Memoization vs tabulation</li></a>
+							<a href="#thinking-in-dp" class="black-link"><li>Thinking in DP: Parameters, states and transitions</li></a>
 						</ul>
 						</br><hr class="thick-line"/>
-						<li>AtCoder DP Contest: Problem A-J collection</li>
+						<a href="#problem-collection" class="black-link"><li>AtCoder DP Contest: Problem A-J collection</li></a>
 						<ul class="sub-list">
-							<li>AtCoder Frog 1 & 2</li>
-							<li>AtCoder Vacation</li>
-							<li>Knapsack 1</li>
-							<li>Knapsack 2</li>
-							<li>LCS</li>
-							<li>Longest Path</li>
-							<li>Grid 1</li>
-							<li>Coins</li>
-							<li>Sushi</li>
+							<a href="#frog-a-b" class="black-link"><li>AtCoder Frog 1 & 2</li></a>
+							<a href="#vacation" class="black-link"><li>AtCoder Vacation</li></a>
+							<a href="#knapsack-1" class="black-link"><li>Knapsack 1</li></a>
+							<a href="#knapsack-2" class="black-link"><li>Knapsack 2</li></a>
+							<a href="#lcs" class="black-link"><li>LCS</li></a>
+							<a href="#longest-path" class="black-link"><li>Longest Path</li></a>
+							<a href="#grid" class="black-link"><li>Grid 1</li></a>
+							<a href="#coins" class="black-link"><li>Coins</li></a>
+							<a href="#sushi" class="black-link"><li>Sushi</li></a>
 						</ul>
+						</br><hr class="thick-line"/>
+						<a href="#conclusion" class="black-link"><li>Concluding Remarks: A general approach to DP Problems</li></a>
 						</br><hr class="thick-line"/>
 					</ol>
-					
+
 				</div>
 				</div>
 				
               </div>
         </div>
 		</center>
-		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<div class="textbox">
+			<div id="introduction">
 			<h3 style="">Introduction: What is DP?</h3>
 			<br/>
-			<center><img src="./assets/img/articles/dp_quote.png"></center>
-			<center><small><i>Why should I care about DP? DP problems are also solvable by recursion, but recursion is mostly exponential in complexity, making their scope is very limited. </i></small></center>
+			</div>
+			<div id ="dp-importance">
+				<center><img src="./assets/img/articles/dp_quote.png"></center>
+				<center><small><i>Why should I care about DP? DP problems are also solvable by recursion, but recursion is mostly exponential in complexity, making their scope is very limited. </i></small></center>
 			<br/>
+
 			<p>
 				Dynamic Programming is an algorithmic paradigm that is used to solve a specific class of problems. All the problems solvable by DP have 2 main properties: <b>Optimal Substructure property</b> and <b>Overlapping subproblems </b>. 
 			</p>
-
-			<p><b>Optimal substructure</b>: The optimal solution of a problem can be achieved by using optimal solutions to the subproblems. In other words, if you can solve the <b>subproblems correctly and optimally</b>, you will be able to arrive at the <b>optimal solution by combining the solutions of subproblems</b> according to the required mathematical recurrence.</p>
-			 
-			<p>
-				<b>Overlapping subproblems</b>: DP requires the <b>same subproblems over and over again</b> to arrive at the solution. So, if we are able to store the solutions to the subproblems, we can optimise our approach <b> by avoiding solving the same problem repeatedly.</b>
-			</p>
-
-			<table class="table">
+			</div>
+			
+			<div id ="optimal-substructure">
+				<p><b>Optimal substructure</b>: The optimal solution of a problem can be achieved by using optimal solutions to the subproblems. In other words, if you can solve the <b>subproblems correctly and optimally</b>, you will be able to arrive at the <b>optimal solution by combining the solutions of subproblems</b> according to the required mathematical recurrence.</p>
+			
+			</div>
+			<div id ="overlapping-subproblems">
+				<p><b>Overlapping subproblems</b>: DP requires the <b>same subproblems over and over again</b> to arrive at the solution. So, if we are able to store the solutions to the subproblems, we can optimise our approach <b> by avoiding solving the same problem repeatedly.</b>
+				</p>
+			</div>
+				
+	<div id ="memoization-vs-tabulation">
+	<br/><h4>Memoization vs Tabulation</h4><br/>
+		<table class="table">
 	  <thead style="background-color:#003366;color:white;">
 		<tr>
 		  <th scope="col">#</th>
@@ -236,7 +205,10 @@
 	</table>
 
 		<br/>
-
+	</div>
+	
+	<div id ="thinking-in-dp">
+	<br/>
 		<h4>Thinking in DP: Identifying parameters, states and transitions</h4><br/>
 
 		<p>Solving a dp problem is a little methodological in nature. Following are the <b>critical</b> steps while approaching a dp problem: </p>
@@ -248,14 +220,17 @@
 		</ol>
 
 		That's enough theory. Let's dive into problems! <br><br>
-
+	</div>
+		
+	<div id ="problem-collection">
 		<h3>Putting DP into practice: Problem collection</h3><br>
-		<p>Note: If you're using python, using PyPy to submit on atcoder. Classic python gives tle even to the codes that have otherwise acceptable time complexities.</p>
+		<p><b>Note:</b>1. <i> If you're using python, using PyPy to submit on atcoder. Classic python gives tle even to the codes that have otherwise acceptable time complexities.</i></p>
+			2. <i>The article will have detailed transition diagrams in the beginning and will become more abstract as we go ahead, eventually not appearing. Reader is encouraged to draw their own transition diagrams.</i></p>
 	
-		<a href="https://atcoder.jp/contests/dp/tasks" _target="blank">Link to atcoder dp contest</a><br>
-		The above link is an excellent resource for dp practice, and I highly recommend checking it out.
-
-			<ol>
+		The following link is an excellent resource for dp practice, as it contains a <b>curated list of the most standard dp problems</b> and I highly recommend checking it out.<a href="https://atcoder.jp/contests/dp/tasks" _target="blank">Link to atcoder dp contest</a><br/>  <br/>	
+	</div>	
+		<ol>
+		<div id ="frog-a-b">
 			<li><h4>Frog A & B</h4></li>
 				<a href="https://atcoder.jp/contests/dp/tasks/dp_a" _target="blank">Frog A </a><br>
 
@@ -289,7 +264,9 @@
 				Here's the code for the code for the same: 
 				<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/frogb.py"></script>	
 			</p>
-
+		</div>
+			
+		<div id ="vacation">
 			<li><h4>AtCoder Vacation</h4></li>
 
 			<a href="https://atcoder.jp/contests/dp/tasks/dp_c" _target="blank">Frog B </a><br>
@@ -312,12 +289,13 @@
 				<center><img src="./assets/img/articles/vacation.png"></center>
 
 				Code for the same: <br/>
-				<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/vacation.py"></script>	
-	
+				<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/vacation.py"></script>
 </li>
 			</ol>
-
-		<li><h4>Knapsack 1 </h4></li>
+		</div>
+			
+		<div id ="knapsack-1">
+			<li><h4>Knapsack 1 </h4></li>
 		<a href="https://atcoder.jp/contests/dp/tasks/dp_d" _target="blank">KnapSack 1 </a><br>
 		<p>This problem is the classical 0/1 Knapsack problem. Given a set of n items each with weight w[i] and value v[i], and a sack which can hold atmost weight of W, find the maximum value you can hold using the sack. </p>
 		
@@ -366,7 +344,9 @@
 			<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/knapsacka.py"></script>
 
 			<br/>
-
+		</div>
+		
+		<div id ="knapsack-2">
 			<li><h4>AtCoder E: Knapsack 2</h4></li>
 				
 			<a href="https://atcoder.jp/contests/dp/tasks/dp_e" _target="blank">KnapSack 2 </a><br>
@@ -402,7 +382,10 @@
 
 			<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/knapsackb.py"></script>
 
-		<li><h4>Longest Common Subsequence (LCS)</h4></li>
+		</div>
+			
+		<div id ="lcs">
+			<li><h4>Longest Common Subsequence (LCS)</h4></li>
 					
 		<a href="https://atcoder.jp/contests/dp/tasks/dp_f" _target="blank">LCS </a><br>
 		<p>Classic LCS: Given strings s and t, find out (any one) longest common subsequence. Our strategy will be to first build the table for the finding optimal length of lcs, and then using the table to pick the lcs.</p>
@@ -425,10 +408,7 @@
 	&nbsp;&nbsp;	dp[i][j] = max(dp[i-1][j],dp[i][j-1])</b>
 
 				</code>
-
-				<center><img src="./assets/img/articles/lcs.png"></center>
-
-								
+				<center><img src="./assets/img/articles/lcs.png"></center>		
 				<br/>
 				
 			</li>
@@ -442,7 +422,9 @@
 
 		<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/lcs.py"></script>
 
-		<li><h4>Longest Path</h4></li>
+		</div>
+		<div id ="longest-path">
+			<li><h4>Longest Path</h4></li>
 		<a href="https://atcoder.jp/contests/dp/tasks/dp_g" _target="blank">Longest Path </a><br>
 		<p>Given a Directed Acyclic Graph, find the length of the longest path.</p>
 
@@ -454,8 +436,10 @@
 		Below the implementation for the same: <br/>
 
 		<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/longestpath.py"></script>
-		
-		<li><h4>Grid 1</h4></li>
+
+		</div>
+		<div id ="grid">
+			<li><h4>Grid 1</h4></li>
 		<a href="https://atcoder.jp/contests/dp/tasks/dp_h" _target="blank">Grid 1 </a><br>
 		<p>Given a grid with connectable rooms and blocked rooms, find the number of ways to reach the destination h,w from start 1,1.</p>
 		
@@ -477,8 +461,12 @@
 			<br/>
 			Here's the implementation for the same: <br/>
 			<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/grid.py"></script>
+		</div>
+		
 
-		<li><h4>Coins</h4></li>
+		
+		<div id ="coins">
+			<li><h4>Coins</h4></li>
 		<a href="https://atcoder.jp/contests/dp/tasks/dp_i" _target="blank">Coins </a><br>
 		<p>Given N coins and the probabilities of getting heads for each coins respectively, find the probability of getting more heads than tails. This is a nice introduction to probability dp problems. It's not really that different from a classic dp problem.</p>
 
@@ -498,7 +486,10 @@
 
 		<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/coins.py"></script>
 
-		<li><h4>Final Problem: Sushi</h4></li>
+		</div>
+		
+		<div id ="sushi">
+			<li><h4>Final Problem: Sushi</h4></li>
 		<a href="https://atcoder.jp/contests/dp/tasks/dp_j" _target="blank">Sushi</a><br>
 		<p>This is difficult problem. The problem states that you are given n plates, where each plate is one of the 4 types of plates of sushis, plates with 3,2,1 and 0 sushis. You have to calculate the expected number of operations till all the plates are empty.</p>
 
@@ -529,11 +520,26 @@
 			<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/DynamicProgramming/sushi.py"></script>
 		
 		<br/>
-		<h3>Conclusion</h3>
-		
-		<p>In this article we talked about what dp is, the necessary theory behind it, followed by solving standard dp problems. At the end, I'd like to once again, emphasize the way of thinking in dp problems. To break it down, the flow goes like: <b>Identify the problem is dp -> Come up with states and define the subproblems -> Come up with the transitions between the states and formulate the transition rules -> Observe the base cases and necessary constraints -> Implement.</b> This requires some practice to get used to, but after solving a few problems, the whole process starts seeming more natural.</p>
-		
 		</div>
+		<div id ="conclusion">
+			<h3>Concluding Remarks: General approach to DP Problems</h3>
+			<p>In this article we talked about what dp is, the necessary theory behind it, followed by solving standard dp problems. At the end, I'd like to once again, emphasize the way of thinking in dp problems. To break it down, the flow goes like: 
+			<b>
+			<ul>
+				<li>Identify the problem is dp</li>
+				<li>Come up with states and define the subproblems</li> 
+				<li>Come up with the transitions between the states and formulate the transition rules</li>
+				<li>Observe the base cases and necessary constraints</li> 
+				<li>Implement</li>
+			</ul>
+			
+			</b>
+
+			 This requires some practice to get used to, but after solving a few problems, the whole process starts seeming more natural.</p>
+			 <p><i>Well then, until next time!</i></p>
+		</div>
+		</div>
+		
         
 		
 
