@@ -2,7 +2,7 @@
 
 	<head>
 		<title>Binary Search: Going beyond the search</title>
-		<link rel = "stylesheet" href="../article-style.css">
+		<!--link rel = "stylesheet" href="../article-style.css"-->
 
 		 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 
@@ -18,32 +18,11 @@
 	  <!-- Template Main CSS File -->
 	  <link href="./assets/css/style.css" rel="stylesheet">
 
-	  <style>
-			* {
-				color : black;
+		<style>
+			html {
+				scroll-behavior: smooth;
 			}
-
-			.textbox {
-				width: 90%;
-				padding-left:10%;
-				padding-top: 20px;
-				font-family: Arial;
-				line-height: 2;
-				font-size: 18px;
-			}
-
-			h2 {
-				font-family: Arial;
-				font-size: 30px;
-				font-weight: bold;
-			}	
-
-			h1 {
-				font-family: Arial;
-				font-size: 40px;
-				font-weight: bold;
-			}			
-	  </style>	
+		</style>
 	</head>
 
 	<body>
@@ -70,22 +49,63 @@
 				  </li>
 				  <li><a href="#contact">Contact Me</a></li>
 				</ul>
-			  </nav><!-- .nav-menu -->
+			  </nav>
 			</div>
   		</header>
 
-	</body>
 
+	<a href="#" class="back-to-top" style="display: inline;"><i class="icofont-simple-up"></i></a>
 	<div>
 		<br/><br/>
-		<center><h3 style="font-weight:bold;">Using Binary Search to solve optimization problems</h3></center>
-		<br/>
-		<div class="textbox" >
 
-			<center><img src="/assets/img/articles/binary_search_header.png" style="width:50%;height:50%;"></center>
-			<br/>
-			<p>
-			Binary Search, is one of the first algorithms taught to computer science students. Its simplicity and efficacy serves as a prime example of how a carefully chosen algorithm can make a big impact on the performance of the application. Without being excessively verbose, here's a quick recap on binary search:
+			<center>
+		<div class="animate__animated animate__fadeInUp">
+		<div class="table-of-contents" style="background-image: url('assets/img/articles/Problem-solving-RS2.jpg'); ">
+				              
+				<div class="carousel-content container" >
+				<div class="inner-toc">
+					<br/><br/>
+					<h3>Binary Search</h3>
+					<br/>
+					<p>Table of contents</p>
+					<center><hr class="thick-line"/></center>
+					<br/>
+					<ol style="text-align:left;">
+						<a href="#introduction" class="black-link"><li>Binary Search on Monotones</li></a>
+						<ul class="sub-list">
+							<a href="#recap" class="black-link"><li>Quick Recap of Bsearch</li></a>
+							<a href="#implementation" class="black-link"><li>Standard Implementation</li></a>
+						</ul>
+						</br><hr class="thick-line"/>
+						<a href="#monotones" class="black-link"><li>Binary Search on Monotones</li></a>
+						<ul class="sub-list">
+							<a href="#monotones" class="black-link"><li>Understanding monotonic functions and use of binary search for searching optimal points</li></a>
+							<a href="#search-strategy" class="black-link"><li>Code and Strategy for search</li></a>
+							<a href="#spoj-aggr-cow" class="black-link"><li>SPOJ's Aggressive Cow Solution</li></a>
+						</ul>
+						</br><hr class="thick-line"/>
+						<a href="#conclusion" class="black-link"><li>Conclusion</li></a>
+						</br><hr class="thick-line"/>
+					</ol>
+
+				</div>
+				</div>
+				
+              </div>
+        </div>
+		</center>
+		<br/><br/><br/><br/><br/><br/><br/>
+		<div class="textbox" >
+			<div id ="introduction">
+				<h3>Using Binary Search to solve optimization problems</h3>
+				<br/>
+				<center><img src="/assets/img/articles/binary_search_header.png" style="width:50%;height:50%;"></center>
+				<br/>
+			</div>
+			
+			<div id ="recap">
+				<p>
+			Binary Search, is one of the first algorithms taught to computer science students. It is a simple, divide and conquer algorithm, which can be implemented iteratively or recursively without much trouble. The simplicity and efficacy of binary search serves as a prime example of how a carefully chosen algorithm can make a big impact on the performance of the application. The following points define binary search accurately:
 			</p>
 			
 			Binary Search:
@@ -94,28 +114,64 @@
 				<li>Runs in O(log n)</li>
 				<li>Requires array to be sorted</li>
 			</ol>
+			</div>
+			
 
-			<p>Below is the implementation of binary search in Python.</p>
-
-			<div id="python-simple-binary-search">
+			<div id ="implementation">
+				<p>Below is the implementation of binary search in Python.</p>
 				<script src="https://gist-it.appspot.com/http://github.com/mehul-choksi/codes-for-site/blob/main/BinarySearch/Plain/binary_search.py"></script>
-     		</div>
 
 			<br/>
 
-			<h4 style="font-weight:bold;">Going beyond the traditional binary search: Binary search based optimization for monotones</h4>
+			</div>
+			<div id ="monotones">
+				<h4>Going beyond the traditional binary search: Binary search based optimization for monotones</h4>
 			<br/>
 			<center> <img src = "/assets/img/articles/monotonic_illustration.png"> </center>
 			<p>
-			Binary search can be used for finding the optimal point in monotonic functions (decreasing throughout/increasing throughout).
-			The idea is similar to the traditional binary search, only this time, instead of an array, we have a monotonic function and a threshold on which we want to binary search. The idea is that we binary search across the domain of admissible values to get the minimum value which satisifies our requirements. 
+			Monotonic functions are functions that are constantly increasing or constantly decreasing throughout the domain of the function. Often in algorithms, we are required to find a optimal point in this monotonic function (which has a huge domain, ruling out brute force). In such cases, binary search comes to our rescue.</p>
+			
+			<p>
+			The idea of finding the optimal point in the domain of a monotone is similar to the traditional binary search, only this time, instead of an array, we have the following:
+			<ul>
+				<li>Monotonic function</li>
+				<li>Domain of monotonic function</li>
+				<li>A condition (usually with a threshold value) that tells what output is acceptable and what is not</li>
+			</ul>
 
- 			Let's have a look at the strategy.
+			</div>
+			<div id="search-strategy">
+				So, given this, lets look at the psuedocode for bsearching accross a monotonic function.
+			<br/>
+			<code style="color:#000080;">
+				<b><br/>
+				# f is monotone <br/>
+				ans = inf # -inf if searching for maximal value<br/>
+				lo = domain_low, hi = domain_high <br/>
+				while lo <= hi: <br/>
+&nbsp;&nbsp;		mid = (lo + hi)/2<br/>
+&nbsp;&nbsp;		val = f(mid) <br/>
+&nbsp;&nbsp;		check val with threshold: <br/>
+&nbsp;&nbsp;		if admissible: <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;update ans if val is better <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;discard the half of domain space that is useless <br/>
+&nbsp;&nbsp;		else: <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;discard the other half <br/>
+				</b>
+			</code>		
+			<br/>
+ 			Let's have a look the code in detail. <br/>
 			</p>
 
 			<script src="https://gist-it.appspot.com/https://github.com/mehul-choksi/codes-for-site/blob/main/Monotone/monotone-strategy.py"></script>
 			<br/><br/>
-			<h4 style="font-weight:bold;">Putting it together: Solving SPOJ's aggressive cows problem</h4>
+			</div>
+			 
+
+			
+
+			<div id ="spoj-aggr-cow">
+				<h4>Putting it together: Solving SPOJ's aggressive cows problem</h4>
 			<p> Link to the problem: <a href="https://www.spoj.com/problems/AGGRCOW/">SPOJ Aggressive Cows</a></p>
 
 			<p>It is recommended that before reading the content below, keeping the idea that we discussed above, give the problem a go.</p>
@@ -136,14 +192,19 @@
 			<h5> Code: </h5>
 			</br>
 			<script src="https://gist-it.appspot.com//https://github.com/mehul-choksi/codes-for-site/blob/main/Monotone/spojaggr.py"></script>	
+			</div>
+			
 
+		<div id ="conclusion">
 			<h5>Conclusion</h5>
 
-			<p>Binary search can often be used for problems that involve finding the most optimal solution, on a monotonic function. The running complexity of O(log n), without any additional space requirement, and its nature of being simple to implement makes it a frequently used algorithm in such situations.</p>
-		</div>
-	<div>
+			<p>Binary search can often be used for problems that involve finding the optimal point, on a monotonic function. The running complexity of O(log n), without any additional space requirement, and its nature of being simple to implement makes binary search a frequently used algorithm in such situations.</p>
 
-	<script>
+			<p><i>Well then, until next time!</i></p><br/>
+		</div>
 			
-	</script>
+		</div>
+
+
+	</body>
 </html>
