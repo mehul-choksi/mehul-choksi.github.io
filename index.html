@@ -42,6 +42,10 @@
         <i class="icofont-envelope"></i><a href="mailto:mehul.choksi98@gmail.com">mehul.choksi98@gmail.com</a>
       </div>
       <div class="social-links float-right">
+        <a href="https://github.com/mehul-choksi" class="github"><box-icon type='logo' name='github'>
+		<img src="assets/img/github.png" height="12px", width="12px">
+		</a>
+		
         <a href="https://www.linkedin.com/in/mehul-choksi-70b606184" class="linkedin"><i class="icofont-linkedin"></i></i></a>
         <a href="https://www.facebook.com/mehul.choksi.37/" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="https://twitter.com/MehulChoksi98" class="twitter"><i class="icofont-twitter"></i></a>
@@ -59,21 +63,35 @@
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
-      <nav class="nav-menu float-right d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#articles">Home</a></li>
 
-          <li><a href="#portfolio">Projects</a></li>
-          <li class="drop-down"><a href="">Articles</a>
-            <ul>
-              <li><a href="dsa.html"> Data Structures and Algorithms</a></li>
-              <li><a href="system-design.html">System Design</a></li>
-              <li><a href="cloud.html">Cloud</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+	<nav class="nav-menu float-right d-none d-lg-block">
+	<ul>
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#contact">Contact</a></li>
+	  <li><a href="#portfolio">Projects</a></li>
+	  <li class="drop-down"><a href="">Articles</a>
+		<ul>
+
+		  <li class="drop-down"><a href="#">Core CS</a>
+		    <ul>
+		      <li><a href="dsa.html">Data Structures and Algorithms</a></li>
+		      <li><a href="db.html">Databases</a></li>
+		      <li><a href="os.html">Operating Systems</a></li>
+		    </ul>
+		  </li>
+		  <li class="drop-down"><a href="#">Dev</a>
+		    <ul>
+		      <li><a href="pl.html">Programming Languages</a></li>
+		      <li><a href="sd.html">System Design</a></li>
+		      <li><a href="cloud.html">Cloud</a></li>
+		    </ul>
+		  </li>
+		  <li><a href="articles.html">View all articles</a></li>
+		  
+		</ul>
+	  </li>
+	</ul>
+	</nav>
 
     </div>
   </header><!-- End Header -->
@@ -149,6 +167,7 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
             <span>01</span>
+			<img src="./assets/img/dsa.png" width="300px" height="200px" style="border-radius:10px;">
             <h4>Data structures and Algorithms</h4>
             <p>Not only does DSA help with improving your problem solving skills, but it also helps you understand how to handle and process data efficiently.</p>
 			<br/>
@@ -164,10 +183,10 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
             <span>02</span>
+			<img src="./assets/img/databases.png" width="300px" height="200px" style="border-radius:10px;">
             <h4>Databases</h4><br/>
 			<div style="padding:5px;"></div>
             <p>Database is means of persisting and organizing the data for fast retrival. The choice of database is critical while deciding applications.</p>
-			<div style="padding:7px;"></div>
 			<br/>
 			<h5>Recent articles</h5>
 			<ul>
@@ -180,10 +199,10 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
             <span>03</span>
+			<img src="./assets/img/operating_systems.jpg" width="300px" height="200px" style="border-radius:10px;">
             <h4> Operating Systems</h4><br/>
 			<div style="padding:5px;"></div>
             <p>OS manages computer hardware and provides resources to software. As every application is dependent on OS for its survival, knowledge of OS is crucial.</p><br/>
-			<div style="padding:7px;"></div>
 			<h5>Recent articles</h5>
 			<ul>
 				<li><a href="#" target="_blank"><h6>Operating Systems article 1</h6></a></li>
@@ -201,6 +220,7 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
             <span>01</span>
+			<img src="./assets/img/pl.png" width="300px" height="200px" style="border-radius:10px;">
             <h4>Programming Languages</h4>
             <p>Instruct the computer to do things for you. Most of the popular languages have their unique strong suits, which is why it is good to be proficient in multiple languages.</p>
 			<br/>
@@ -215,6 +235,7 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
             <span>02</span>
+			<img src="./assets/img/sd.png" width="300px" height="200px" style="border-radius:10px;">
             <h4>System Design</h4><br/>
 			<div style="padding:5px;"></div>
             <p>Solve commonly occuring problems occuring in the computer world, such as database selection and load balancing using a set of conventional, well defined solutions.</p>
@@ -230,6 +251,7 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
             <span>03</span>
+			<img src="./assets/img/cloud.png" width="300px" height="200px" style="border-radius:10px;">
             <h4> Cloud Computing</h4><br/>
 			<div style="padding:5px;"></div>
             <p>Provide on demand compute resources to support web applications on internet. Articles will be focusing on Amazon Web Services, the major cloud service provider in the market.</p>
@@ -270,7 +292,7 @@
                 <p>With the advent of stricter data laws, such as GDPR, this project provides an alternate way to deliver ads to user, based on the content of the website, as opposed to the traditional clickstream and user history method</p>
                 <div class="portfolio-links">
                   
-                  <a href="https://github.com/mehul-choksi/contextual-ads" title="View project on Github" target="_blank"><i class="icofont-github"></i></a>
+                  <a href="https://github.com/mehul-choksi/contextual-ads" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
               </div>
             </div>
@@ -284,7 +306,7 @@
                 <h4>Playstore text-reviews based application rater</h4>
 					<p>Uses sentiment analysis to assess the user satisfication, and subsequently quantifies the average satisfication. Can detect fradulent applications which trick users to give a 5-star rating.</p>
                 <div class="portfolio-links">
-                  <a href="https://github.com/mehul-choksi/playstore-sentiment-analytics" title="View project on Github" target="_blank"><i class="icofont-github"></i></a>
+                  <a href="https://github.com/mehul-choksi/playstore-sentiment-analytics" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
               </div>
             </div>
@@ -297,7 +319,7 @@
                 <h4>Pdf parser and Report Generator</h4>
                 <p>Extracts the scores & student details from a raw pdf and produces a csv. Further, it generates a report which analyses the difficulty of scores using stats and visualization.</p>
                 <div class="portfolio-links">
-                  <a href="https://github.com/mehul-choksi/Analysis-Report-Generator" title="View project on Github" target="_blank"><i class="icofont-github"></i></a>
+                  <a href="https://github.com/mehul-choksi/Analysis-Report-Generator" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
               </div>
             </div>
@@ -310,7 +332,7 @@
                 <h4>Techfest Chatbot</h4>
                 <p>A telegram + dialogflow based chatbot that answers the queries of the users in realtime, to alleviate pressure on organizers.</p>
                 <div class="portfolio-links">
-                  <a href="https://github.com/mehul-choksi/hackathon-chatbot" title="View project on Github" target="_blank"><i class="icofont-github"></i></a>
+                  <a href="https://github.com/mehul-choksi/hackathon-chatbot" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
               </div>
             </div>
@@ -323,7 +345,7 @@
                 <h4>Desktop Bug tracking app</h4>
                 <p>Java swing + mysql based offline application that alongs the users to add,manage and track the statuses of bugs.</p>
                 <div class="portfolio-links">
-                  <a href="https://github.com/mehul-choksi/issue-tracker" title="View project on Github" target="_blank"><i class="icofont-github"></i></a>
+                  <a href="https://github.com/mehul-choksi/issue-tracker" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
               </div>
             </div>
@@ -336,7 +358,7 @@
                 <h4>Github Finder</h4>
                 <p>A react-based application that visualizes the users found using the github api. Demonstrates usage of react-context,classless components and hooks.</p>
                  <div class="portfolio-links">
-                  <a href="https://github.com/mehul-choksi/react-github-finder" title="View project on Github" target="_blank"><i class="icofont-github"></i></a>
+                  <a href="https://github.com/mehul-choksi/react-github-finder" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
               </div>
             </div>
