@@ -776,7 +776,7 @@ section {
 }
 
 .about-lists .content-item p {
-  color: #aaaaaa;
+  /*color: #aaaaaa;*/
   font-size: 15px;
   margin: 0;
   padding: 0;
@@ -1369,10 +1369,10 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #768fa6;
-  color: #fff;
+  /*background: white;
+  color: #fff;*/
   line-height: 1;
-  padding: 8px 0;
+  padding: 5px 0;
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
@@ -1382,8 +1382,8 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #428bca;
-  color: #fff;
+  /*background: #428bca;
+  color: #fff;*/
   text-decoration: none;
 }
 
