@@ -10,12 +10,11 @@
   <meta content="mehul choksi github website pict pune computer science developer" name="keywords">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+  <link href="assets/css/google-font.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -24,12 +23,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Mamba - v2.5.0
-  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 
@@ -58,13 +51,12 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a href="index.html"><span>Mehul Choksi</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1 class="text-light"><a href="index.html"><!--span>Mehul Choksi</span--></a></h1>
+       
       </div>
 
 
-	<nav class="nav-menu float-right d-none d-lg-block">
+	<nav class="nav-menu float-left d-none d-lg-block">
 	<ul>
 	  <li><a href="#">Home</a></li>
 	  <li><a href="#contact">Contact</a></li>
@@ -100,6 +92,7 @@
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
+		
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
@@ -108,68 +101,111 @@
           <div class="carousel-item active" style="background-image: url('assets/img/slide/slide-1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Mehul Choksi</h2>
-                <p class="animate__animated animate__fadeInUp">Hi! I am a Comp Science Grad from PICT, Pune. My interests are web development, data processing, dev ops and cloud. </p>
+                <h2 class="animate__animated animate__fadeInDown" style="color:black">Mehul Choksi</h2>
+                <h3 class="animate__animated animate__fadeInUp" style="color:black">Web Developer | Cloud | Dev Ops</h3>
               </div>
             </div>
           </div>
 
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-				<div >
-                <h3 class="animate__animated animate__fadeInDown" style="color:black;">Hands on Technologies:</h3>
-					<center><img src="assets/img/technologies.png""></center>                
-				</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/slide-3.png');">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-            <!--h2 class="animate__animated animate__fadeInDown">Hobbies</h2-->
-			            
-              </div>
-            </div>
-          </div>
-
+         
         </div>
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev" style="color:#fff79c">
-          <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next" style="color:#fff79c">
-          <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
+       
       </div>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
 
-    
+    <section>
+		<div class="container">
+			<div class="row">
+				<div style="float:left;padding:30px;width:40%;">
+				<img src="assets/img/mehul_.png" width="200px" height="200px" style="border-radius:20px;">
+				</div>
+
+				<div style="float:right;padding:30px;width:50%;">
+				<h3>About Me</h3>
+				<p>Hi! I am a Comp Science Grad from PICT, Pune. During my graduation, I developed applications in web development, parsing, chatbots and sentiment analysis through which I have gained valuable experience. My interests lie in fullstack web development & cloud.</p>
+				<p>Aside from programming, I also like to eagerly learn new things and write about them.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<section class="about-lists">
+      <div class="container">
+		<div class="section-title">
+		  <h2>Skills</h2>
+		</div>
+        <div class="row no-gutters">
+
+           <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
+            <span>02</span>
+            <h4>Java</h4>
+            <p>Spring Boot, Maven</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
+            <span>02</span>
+            <h4>Python</h4>
+            <p>Flask,SpaCy</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
+            <span>03</span>
+            <h4> Node</h4>
+            <p>Express JS</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
+            <span>04</span>
+            <h4>React</h4>
+            <p>Classful,Classes,Hooks,Context</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
+            <span>05</span>
+            <h4>Databases</h4>
+            <p>MySQL, Mongo</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item aos-init aos-animate">
+            <span>06</span>
+            <h4>AWS</h4>
+            <p>EC2, ELB, EBS, Lambda</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+	
+
     <section>
 
 	<div class="about-lists">
       <div class="container">
-	  <h6>I like engaging in technical writing. My goal is to convey maximum information, in a easy-to-understand fashion. Frequent topics of interest:</h6><br/>
+		<div class="section-title">
+          <h2>Articles</h2>
+        </div>
 		<div class="animate__animated animate__fadeInUp">
 
-		<div style="background-color:#dfe6ff;color:#000080;height:90px;padding-top:15px;border-radius:15px;" data-aos="fade-up" class="content-item"><h4>Core CS Topics</h4></div>
+		<div style="background-color:#dfe6ff;color:black;padding:5px;border-radius:15px;" >
+			<h4 style="padding:10px;text-align:center">Core CS Topics</h4>
+		</div>
+		
 		<br/>
         <div class="row no-gutters">
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6 content-item">
             <span>01</span>
-			<img src="./assets/img/dsa.png" width="300px" height="200px" style="border-radius:10px;">
-            <h4>Data structures and Algorithms</h4>
-            <p>Not only does DSA help with improving your problem solving skills, but it also helps you understand how to handle and process data efficiently.</p>
+			<center><img src="./assets/img/dsa.png" width="200px" height="130px" style="border-radius:10px;"></center>
+            <br/><br/><h5>Data structures and Algorithms</h5>
+            <p>Improving your problem solving skills,handle and process data efficiently.</p>
 			<br/>
 			<h5>Recent articles</h5>
 			<ul>
@@ -177,92 +213,88 @@
 				<li><a href="binary_search.html" target="_blank"><h6>Binary Search on monotones</h6></a></li>
 			</ul>
 			<br/>
-			<div style="padding:9px;"></div>
-			<a href="dsa.html" target="_blank"><h6>See all DSA Articles</h6></a>
+			<a href="dsa.html" target=""><h6>See all DSA Articles</h6></a>
           </div>
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 content-item">
             <span>02</span>
-			<img src="./assets/img/databases.png" width="300px" height="200px" style="border-radius:10px;">
-            <h4>Databases</h4><br/>
-			<div style="padding:5px;"></div>
-            <p>Database is means of persisting and organizing the data for fast retrival. The choice of database is critical while deciding applications.</p>
+			<center><img src="./assets/img/databases.png" width="200px" height="130px" style="border-radius:10px;"></center>
+            <br/><br/><h5>Databases</h5>
+            <p>Database is means of persisting and organizing the data for fast retrival. </p>
 			<br/>
 			<h5>Recent articles</h5>
 			<ul>
-				<li><a href="#" target="_blank"><h6>Database article 1</h6></a></li>
-				<li><a href="#" target="_blank"><h6>Database article 2</h6></a></li>
+				<li><a href="#" target=""><h6>Database article 1</h6></a></li>
+				<li><a href="#" target=""><h6>Database article 2</h6></a></li>
 			</ul>
 			<br/>
-			<a href="#" target="_blank"><h6>See all Database Articles</h6></a>
+			<a href="#" target=""><h6>See all Database Articles</h6></a>
           </div>
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 content-item" >
             <span>03</span>
-			<img src="./assets/img/operating_systems.jpg" width="300px" height="200px" style="border-radius:10px;">
-            <h4> Operating Systems</h4><br/>
-			<div style="padding:5px;"></div>
-            <p>OS manages computer hardware and provides resources to software. As every application is dependent on OS for its survival, knowledge of OS is crucial.</p><br/>
+			<center><img src="./assets/img/operating_systems.jpg" width="200px" height="130px" style="border-radius:10px;"></center>
+            <br/><br/><h5>Operating Systems</h5>
+            <p>The one who runs it all.</p><br/><br/>
 			<h5>Recent articles</h5>
 			<ul>
-				<li><a href="#" target="_blank"><h6>Operating Systems article 1</h6></a></li>
-				<li><a href="#" target="_blank"><h6>Operating Systems article 2</h6></a></li>
+				<li><a href="#" target=""><h6>Operating Systems article 1</h6></a></li>
+				<li><a href="#" target=""><h6>Operating Systems article 2</h6></a></li>
 			</ul>
 			<br/>
-			<a href="#" target="_blank"><h6>See all OS Articles</h6></a>
+			<a href="#" target=""><h6>See all OS Articles</h6></a>
           </div>
         </div>
 
 		<br/><br/>
-		<div style="background-color:#dfe6ff;color:#000080;height:90px;padding-top:15px;border-radius:15px;" data-aos="fade-up" class="content-item"><h4>Dev</h4></div>
+		<div style="background-color:#dfe6ff;color:black;padding:5px;border-radius:15px;">
+			<h4 style="padding:10px;text-align:center">Development</h4>
+		</div>
 		<br/>
         <div class="row no-gutters">
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6 content-item">
             <span>01</span>
-			<img src="./assets/img/pl.png" width="300px" height="200px" style="border-radius:10px;">
-            <h4>Programming Languages</h4>
-            <p>Instruct the computer to do things for you. Most of the popular languages have their unique strong suits, which is why it is good to be proficient in multiple languages.</p>
+			<img src="./assets/img/pl.png" width="200px" height="130px" style="border-radius:10px;">
+            <br/><br/><h5>Programming Languages</h5>
+            <p>Hello World?</p>
 			<br/>
 			<h5>Recent articles</h5>
 			<ul>
-				<li><a href="#" target="_blank"><h6>Programming langugage article 1</h6></a></li>
-				<li><a href="#" target="_blank"><h6>Programming langugage article 2</h6></a></li>
+				<li><a href="#" target=""><h6>Programming langugage article 1</h6></a></li>
+				<li><a href="#" target=""><h6>Programming langugage article 2</h6></a></li>
 			</ul>
 			<br/>
-			<a href="#" target="_blank"><h6>See all PL Articles</h6></a>
+			<a href="#" target=""><h6>See all PL Articles</h6></a>
           </div>
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 content-item" >
             <span>02</span>
-			<img src="./assets/img/sd.png" width="300px" height="200px" style="border-radius:10px;">
-            <h4>System Design</h4><br/>
-			<div style="padding:5px;"></div>
-            <p>Solve commonly occuring problems occuring in the computer world, such as database selection and load balancing using a set of conventional, well defined solutions.</p>
+			<center><img src="./assets/img/sd.png" width="200px" height="130px" style="border-radius:10px;"></center>
+            <br/><h5>System Design</h5>
+            <p>Design [blahblah] app</p>
 			<br/>
 			<h5>Recent articles</h5>
 			<ul>
-				<li><a href="#" target="_blank"><h6>System Design Article 1</h6></a></li>
-				<li><a href="#" target="_blank"><h6>System Design Article 2</h6></a></li>
+				<li><a href="#" target=""><h6>System Design Article 1</h6></a></li>
+				<li><a href="#" target=""><h6>System Design Article 2</h6></a></li>
 			</ul>
 			<br/>
-			<a href="#" target="_blank"><h6>See all System Design Articles</h6></a>
+			<a href="#" target=""><h6>See all System Design Articles</h6></a>
           </div>
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 content-item" >
             <span>03</span>
-			<img src="./assets/img/cloud.png" width="300px" height="200px" style="border-radius:10px;">
-            <h4> Cloud Computing</h4><br/>
-			<div style="padding:5px;"></div>
-            <p>Provide on demand compute resources to support web applications on internet. Articles will be focusing on Amazon Web Services, the major cloud service provider in the market.</p>
+			<center><img src="./assets/img/cloud.png" width="200px" height="130px" style="border-radius:10px;"></center>
+            <br/><h5>Cloud Computing</h5>
+            <p>It's about how you do computing, not where.</p>
 			<br/>
 			<h5>Recent articles</h5>
 			<ul>
-				<li><a href="#" target="_blank"><h6>Cloud Article 1</h6></a></li>
-				<li><a href="#" target="_blank"><h6>Cloud Article 2</h6></a></li>
+				<li><a href="#" target=""><h6>Cloud Article 1</h6></a></li>
+				<li><a href="#" target=""><h6>Cloud Article 2</h6></a></li>
 			</ul>
-			<br/>
-			<a href="#" target="_blank"><h6>See all Cloud Articles</h6></a>
+			<a href="#" target=""><h6>See all Cloud Articles</h6></a>
           </div>
 		</div>
       </div>
@@ -273,11 +305,11 @@
     
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" >
 
         <div class="section-title">
           <h2>Projects</h2>
-          <p>Below are the some of the projects that I've worked on. All of the projects are linked to github, where there source can be found.</p>
+      		
         </div>
 
         
@@ -292,7 +324,7 @@
 		      <br>
               <div class="portfolio-info">
                 <h4>Contextual ads</h4>
-                <p>With the advent of stricter data laws, such as GDPR, this project provides an alternate way to deliver ads to user, based on the content of the website, as opposed to the traditional clickstream and user history method</p>
+                <p>Deliver ads to user, based on the content of the website, as opposed to the traditional clickstream and user history method</p>
                 <div class="portfolio-links">
                   
                   <a href="https://github.com/mehul-choksi/contextual-ads" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
@@ -309,7 +341,7 @@
 			<div class="portfolio-info">
 
                 <h4>Playstore text-reviews based application rater</h4>
-					<p>Uses sentiment analysis to assess the user satisfication, and subsequently quantifies the average satisfication. Can detect fradulent applications which trick users to give a 5-star rating.</p>
+					<p>Uses sentiment analysis to assess the user satisfication, and quantifies it. Can detect fraud apps which trick users to give a 5-star rating.</p>
                 <div class="portfolio-links">
                   <a href="https://github.com/mehul-choksi/playstore-sentiment-analytics" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
@@ -319,13 +351,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap" style="background-color: #f5fffe;">
-              <!--img src="assets/img/portfolio/pdf-parser.png" style="width:400px;height:300px;" alt=""-->
 			  <br>
 		          <center><img src="assets/img/portfolio/pdf-parser.png" style="width:200px;height:150px;" alt=""></center>
 		      <br> 
               <div class="portfolio-info">
                 <h4>Pdf parser and Report Generator</h4>
-                <p>Extracts the scores & student details from a raw pdf and produces a csv. Further, it generates a report which analyses the difficulty of scores using stats and visualization.</p>
+                <p>Extracts the scores & student details from a raw pdf and produces a csv & generates a report which analyses the difficulty of scores using stats and visualizations.</p>
                 <div class="portfolio-links">
                   <a href="https://github.com/mehul-choksi/Analysis-Report-Generator" title="View project on Github" target="_blank"><img src="assets/img/github.png" height="12px", width="12px"></a>
                 </div>
@@ -397,8 +428,8 @@
 
           <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="info-box">
-              <i class="bx bx-envelope"></i>
-			  </br></br>
+              <img src="assets/img/mail.png" height="70px", width="70px">
+			  </br><div style="padding:5px;"></div>
               <h6>mehul.choksi98@gmail.com</h6>
             </div>
           </div>
@@ -463,26 +494,26 @@
 			</br>
 			<strong><p>Or reach out on social media:</p></strong>
             <div class="social-links mt-3">
-              <a href="https://twitter.com/MehulChoksi98" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/mehul.choksi.37/" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.linkedin.com/in/mehul-choksi-70b606184" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://twitter.com/MehulChoksi98"><img src="assets/img/twitter.png" height="35px" width="35px"></a>
+              <a href="https://www.facebook.com/mehul.choksi.37/"><img src="assets/img/facebook.png" height="25px" width="25px"></a>
+              <a href="https://www.linkedin.com/in/mehul-choksi-70b606184"><img src="assets/img/linkedin.png" height="25px" width="25px" style="background:white;"></a>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Projects</a></li>
+              <li></i> <a href="#home">Home</a></li>
+              <li></i> <a href="#portfolio">Projects</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Technical writing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cloud solutions</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Technical writing</a></li>
+              <li><a href="#">Cloud solutions</a></li>
             </ul>
           </div>
 
@@ -513,6 +544,7 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
+  
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
