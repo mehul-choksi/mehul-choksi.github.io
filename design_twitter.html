@@ -1,0 +1,461 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="mehul choksi github website pict pune computer science developer" name="description">
+  <meta content="mehul choksi github website pict pune computer science developer" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mamba - v2.5.0
+  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+	<!-- Title of webpage -->
+	<title>Design Twitter</title>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+</head>
+
+
+<body>
+
+   <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="icofont-envelope"></i><a href="mailto:mehul.choksi98@gmail.com">mehul.choksi98@gmail.com</a>
+      </div>
+      <div class="social-links float-right">
+        <a href="https://www.linkedin.com/in/mehul-choksi-70b606184" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="https://www.facebook.com/mehul.choksi.37/" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="https://twitter.com/MehulChoksi98" class="twitter"><i class="icofont-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+
+      <nav class="nav-menu float-left d-none d-lg-block">
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="index.html#contact">Contact</a></li>
+		  <li><a href="index.html#portfolio">Projects</a></li>
+		  <li class="drop-down"><a href="">Articles</a>
+			<ul>
+
+			  <li class="drop-down"><a href="#">Core CS</a>
+				<ul>
+				  <li><a href="dsa.html">Data Structures and Algorithms</a></li>
+				  <li><a href="db.html">Databases</a></li>
+				  <li><a href="os.html">Operating Systems</a></li>
+				</ul>
+			  </li>
+			  <li class="drop-down"><a href="#">Dev</a>
+				<ul>
+				  <li><a href="pl.html">Programming Languages</a></li>
+				  <li><a href="sd.html">System Design</a></li>
+				  <li><a href="cloud.html">Cloud</a></li>
+				</ul>
+			  </li>
+			  <li><a href="articles.html">View all articles</a></li>
+			  
+			</ul>
+		  </li>
+		</ul>
+		</nav>
+
+    </div>
+  </header><!-- End Header -->
+
+	<a href="#" class="back-to-top" style="display: inline;"><i class="icofont-simple-up"></i></a>
+
+	<!-- Table of contents-->
+
+	<center>
+	<div class="animate__animated animate__fadeInUp">
+	<!-- Toc bg img-->
+	<div class="table-of-contents" style="background-image: url('assets/img/articles/Problem-solving-RS2.jpg'); ">
+			              
+		<div class="carousel-content container" >
+		
+		<div class="inner-toc" style="font-size:14px;">
+			<br/><br/>
+			<h3>Designing Twitter</h3>
+			<br/>
+			<p>Table of contents</p>
+			<center><hr class="thick-line"/></center>
+			<br/>
+			<ol style="text-align:left;">
+				<a href="#introduction" class="black-link"><li>Designing twitter: Introduction</li></a>
+				<a href="#mvp-charactericstics" class="black-link"><li>MVP and Charactericstics of twitter</li></a>
+				<a href="#data-model-er" class="black-link"><li>Data model & ER Diagram</li></a>
+				</br><hr class="thick-line"/>
+
+				<a href="#writing-tweets" class="black-link"><li>Feature 1: Writing tweets</li></a>
+				<ul class="sub-list">
+					<a href="#writing-tweets-flow" class="black-link"><li>Flow</li></a>
+					<a href="#load-balancer" class="black-link"><li>Why is a load balancer needed?</li></a>
+				</ul>
+				</br><hr class="thick-line"/>
+
+				<a href="#rendering-home-timeline" class="black-link"><li>Feature 2: Rendering Home timeline</li></a>
+				<ul class="sub-list">
+					<a href="#timeline-naive-approach" class="black-link"><li>Naive approach:</li></a>
+					<a href="#fanout" class="black-link"><li>Twitter's Fanout solution to rendering home timeline quickly:</li></a>
+					<a href="#redis" class="black-link"><li>Why Redis?</li></a>
+				</ul>
+				</br><hr class="thick-line"/>
+
+				<a href="#following" class="black-link"><li>Feature 3: Following</li></a>
+
+				<a href="#searching" class="black-link"><li>Feature 4: Searching</li></a>
+					<ul class="sub-list">
+						<a href="#distributed-search" class="black-link"><li>Distributed search engine</li></a>
+						<a href="#early-bird" class="black-link"><li>Early Bird: Twitter's real time search engine</li></a>
+					</ul>
+
+				<hr class="thick-line"/>
+
+				<a href="#conclusion" class="black-link"><li>Conclusion</li></a>
+
+			</ol>
+
+			</div>
+			</div>
+			
+          </div>
+        </div>
+		</center>
+
+		<br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><!-- Paste more as needed -->
+		<!-- End of toc -->
+
+		<div class="textbox">
+
+			<div id="introduction">
+				<h3>Designing Twitter: Introduction</h3><br/>
+				<p>When asked to design a particular application, it is not expected that you have to design the entire application, with detailed analysis of each and every component, because not only is that a herculean task, but also that such a task requires a extensive research, discussions and analysis, which simply cannot be covered in a single article.
+				</p>
+				<p>
+					Therefore, essentially we look at the <b> minimum viable product(MVP), which encompasses of the app's core functionalities</b>. After identifying the core functionalities, we look at the ways to implement the application. Keeping in mind the charactericstics (traffic,usage,etc) of the application we take <b>design decisions to deliver optimal performance. Justification for design decisions is necessary.</b>   
+				</p>
+			</div>
+
+
+			<div id="mvp-charactericstics">
+				<h3>MVP and Charactericstics of Twitter</h3><br/>
+				<p>
+					Below are the core requirements of the twitter application:
+				</p>
+				<b>
+					User can:
+					<ol>
+					<li>Tweet</li>			
+					<li>Follow</li>			
+					<li>View Timelines: User timeline & Home timeline</li>			
+					<li>Search</li>			
+					</ol> 
+				</b>
+				<p>Characteristics of twitter:</p> 
+				<b>
+				<ol>
+					<li>300M daily users</li>
+					<li>6,000 tweets/s</li>
+					<li>Read heavy app</li>
+				</ol>
+				</b> 
+			</div>
+
+			<div id="data-model-er">
+				<h3>Data model</h3>
+				<p>The use case for designing the mvp of twitter has relatively simple data tables. Because the <b>data is structured and simple in nature, we can use relational database for persistance of the data.</b> Below is the relational table design. 
+				</p>
+				
+				<b>
+				<ul>
+					<li>Users(user_id (primary key), name) </li>
+					<li>Tweets(tweet_id (primary key), content,user_id)</li>
+					<li>Followers(user_id (primary key), follower_id (foreign key))</li>
+					<li></li>
+				</ul>
+				</b>
+
+				<p>The ER diagram for the same is as follows: </p>
+			</div>
+
+
+			<div id="writing-tweets">
+				<h3>Feature 1: Writing tweets</h3>
+				<p><b>Use case:</b> User is able to <b>post a short message</b>(<=280 characters) which will be visible to the people following to him, as well as in the user's home timeline.</p>
+
+
+				<div id="writing-tweets-flow">
+					<h4>Flow:</h4>
+					<ol>
+						<li>User <b>posts the tweet</b></li>
+						<li>The <b>request hits the load balancer</b>, which then <b>redirects the request to a nearby database center</b></li>
+						<li>Request is <b>handed to a database machine, which processes the request, writes into the tables.</b></li>
+					</ol>
+				</div>
+				
+
+				<div id="load-balancer">
+					<h4>Why is a load balancer needed?</h4>
+
+					<p>A load balancer <b>distributes the network traffic</b> across a number of servers. The aim is <b>increase requests concurrently handled</b>, and <b>make the application more reliable.</b></p>
+
+					<ol>
+						<li>Increase requests concurrently handled: 
+							<ul>
+								<li>By <b>effectively distributing load</b> accross the servers</li>
+								<li><b>Choosing the best server</b> to serve a user using an effective load balancing algorithm</li>
+								<li>Common <b>algos</b> for load balancing: <b>Round-robin</b>(sequential requesting), <b>least connections</b> (least busy server handles req), <b>ip hash</b>(geographically determine the server)</li>
+							</ul>
+						</li>
+
+						<li>Make application more reliable:
+							<p>Load balancer performs <b>health checks</b> and tracks status of all the servers. <b>If a server is down</b>, the client <b>request is redirected to another server</b>, making the application more relaible.</p>
+						</li>
+					
+					</ol>
+
+					<p>Examples of load balancers: Nginx, AWS ELB </p>
+				</div>
+				
+			</div>
+
+			<div id="rendering-home-timeline">
+				<h3>Feature 2: Rendering Home timeline</h3>
+				<p><b>Use case: Render the home timeline</b> for the user. Home timeline is the feed of the user <b>where they see tweets</b> posted by the people they are following.
+				</p>
+
+				<div id="timeline-naive-approach">
+					<h4>Naive approach:</h4>
+				<ol>
+					<li>Get the ids of people user is following</li>
+					<li>Get tweets people in step 1</li>
+					<li>Merge them in chronological order</li>
+				</ol>
+
+				<p>
+					<b>Problem</b>: This operation <b>requires a join</b>, which is <b>very heavy in computation</b> for large databases and <b>does not scale.</b>
+				</p>
+
+				</div>
+				
+				<div id="fanout">
+					<h4>Twitter's Fanout solution to rendering home timeline quickly:</h4>
+
+				<p>
+					The idea is to <b>precompute the home timelines</b> of all the users. Meaning, whenever a tweet arrives,  do a lot of processing and figure out where the tweets should go. Here, twitter goes and <b>fetches all the people who follow the person who tweeted, and adds the tweet in their home timeline.</b> So <b>updations are constantly being done for a user's home timeline, even when a user is not active.</b></p>
+				<p>
+	This makes the part of <b>fetching and reading the home timeline faster and easier</b> with the tradeoff that <b>writing tweets is slower.</b> However, from the stats it is clear that <b>twitter has a read-heavy consumption</b>, with <b>writes being much more scarce</b>, making this tradeoff work for the better.
+				</p>
+
+				<h4>High level overview:</h4>
+				<ol>
+					<li>You <b>create a request</b> when you write a tweet</li>
+					<li>The request goes to load balancer</li>
+					<li><b>load balancer pushes your tweet into a redis cluster and is replicated 3 times to ensure high availability.</b> </li>
+					<p>Note: It could be the case that the tweet is added in 1 redis machine faster than the other 2 machines, but eventually all 3 redis db machines will have the same tweets. We are trading off consistency for high availability.</p>
+				</ol>
+				</div>
+				
+
+				<div id="redis">
+					<h4>Why use Redis for fanout?</h4>
+
+				<ol>
+					<li>Redis is an <b>in-memory, key-value store.</b> </li>
+					<li><b>In memory feature:</b> None of the operations require a round trip to the disk, the <b>data is directly accessed from memory</b>, which <b>dramatically speeds up the operations</b>, and allows more operations to be done concurrently.</li>
+					<li><b>Key-value store: nature of data in twitter is simple, can be easily modelled into key value form.</b></li>
+				</ol>
+
+				<p>Each <b>user's home timeline</b> sits in redis cluster with a <b>maximum of 800 entries</b>. 
+				<b>Data structure</b> for user's home timeline is <b>native redis list</b>, which inserts things in chronological order. Removal of oldest tweets is also easy. <b>O(1) insert & delete.</b></p>
+				</div>
+
+				
+
+				<div id="optimizing-fanout">
+					<h4>Optimizing fanout</h4>
+
+				<p>The redis cluster would <b>require tremendous amount of memory</b> to store all the tweets by the users. One <b>way to optimize this</b> is to <b>store the tweets of the users who have been active in the past few days or weeks.</b> So if a <b>user has not been active in the last 2 weeks, dont keep them in the redis cluster</b>, and avoid the excessive precomputation.</p>
+
+				<h4>What to do if an inactive user logs in? </h4>
+				<p><b>Use sql approach</b>, and fetch the tweets into his home timeline. <b>Have a rule which decides whether to classify the user as active or not.</b> If active, add his entry in redis cluster.</p>
+
+				<h4>Flow of operating</h4>
+				<ol>
+					<li>User goes to twitter via browser, sends a <b>get request</b>, which is handled by a <b>load balancer</b></li>
+					<li>The load balancer reads and understands the nature of request (get) and <b>queries the 3 redis databases</b> which have the timeline of the user</li>
+					<li>The <b>db with the quickest response sends the timeline to load balancer</b></li>
+					<li><b>Load balancer sends the response to browser</b> & timeline is rendered to user</li>
+				</ol>
+
+				<p>Note: The load balancer should know the 3 redis db's to send request to, out of potentially thousands of dbs. This can be maintained with the help of HashMaps. Key: user_id, value = [server1 , 2, 3]</p> 
+
+				</div>
+				
+
+				<div id="fanout-challenge">
+					<h4>Fanout challenge: 	What if a celebrity with millions of followers tweets? </h4>
+
+					<p><b>Operations x3 their followers would have to take place, which is a huge computational overhead.</b> There is significant lag in the updates as well - some people are people to see the tweet, while some people see it much later.</p>
+					<p><b>Solution:</b> For celebrities, Use the sql based approach.</b> In other words, <b>load their tweets during the process of a follower requesting for his timeline.</b>
+					</p>
+				</div>
+				
+
+				<div id="trade-offs">
+					<h4>Trade offs of fanning out</h4>
+					<b>
+					<ol>
+						<li>Eventual consistency for high availablity</li>
+						<li>Space consumption: High, but tweets are limited 280 characters, making this approach manageable in terms of space</li>
+						<li>Fast reads, slower writes</li>
+					</ol>
+					</b>
+				</div>
+				
+			</div>
+
+
+			<div id="following">
+			<h3>Feature 3: Following</h3>
+				<p>Use case: Allow the users to <b>follow/unfollow</b> users & <b>Fetch the followers of users for fanout</b>.
+				</p>
+
+				<p>A regular following table would suffice for this. Because the followers dont get updated very frequently, there is no need 					of in memory db.</p>
+				<p>	The following table should be sufficient for this: Followers(user_id,follower_id), Relation: Many to many.</p>
+			
+				<ol>
+
+					<li>The <b>design of table is simple</b>. According to the requirements, the queries one the followers table will never require joins. Absolutely <b>avoid unnecessary indexing</b>.</li>
+					<li>MySQL has a limit of 64TB/table, PostGres: 32TB/table (can be changed manually), which enables a <b>table to handle hundreds of billions of records without much difficulty</b>, provided that the table is well designed.</li>
+					<li>For best performance you should <b>have: sufficient disk space,good disk performance (high IOPS), and large amount of memory</b>, which can be provided by a cloud provider.</li>
+				</ol>
+
+			</div>
+
+
+
+			<div id="searching">
+			<h3>Feature 4: Searching</h3>
+				<p>
+					Tradtional searching involves inverted indices and batch index updates. 
+	While twitter makes use of <b>inverted indices</b>, it also requires <b>real-time index updates.</b>
+				</p>
+
+				<p>
+				As per Twitter's <a href="http://users.umiacs.umd.edu/~jimmylin/publications/Busch_etal_ICDE2012.pdf" target="_blank">whitepaper</a> regarding search using Early Bird, Twitter's searching requirements are:  
+				</p>
+				<ol>
+					<li><b>Low latency, high throughput</b> query evaluation</li>
+					<li>>Ability to <b>ingest content rapidly</b> (and handle data spikes as well) and <b>make it searchable immediately</b></li>
+				</ol>
+				<p>
+				As a result of 1 & 2, concurrent reads and writes and necessary. Index structures must be constantly updated as documents are ingested.
+				</p>
+				<p><b>Timestamps are extremely important for ordering search results</b> in twitter.</p>
+
+
+				<div id="distributed-search-engine">
+					<h4>Distributed search engine</h4>
+				<p><b>Twitter's requirements correspond to a distributed search engine, on top of which sits EarlyBird</b>, twitter's real time retrieval search engine. Briefly, the search system is discussed.</p> 
+
+				<p>Low latency and high throughput query evaluation can be achieved using a distributed search system, where the user queries are routed on the basis of server load and/or geograhpical location.</p> 
+
+				<p>To ensure robustness and high availability, the database machines are organized in a replicated and broker(load balancer) coordinated manner.
+				The <b>document collection is partioned logically(sharded) into disjoint segments</b>, and <b>individual machines are responsible for serving indexes that correspond to these document partitions</b>.
+				</p>
+
+				<p>Flow of search: </p>
+				<ol>
+					<li>User sends a search query which is received by a load balancer</li>
+					<li>Load balancer contacts the database servers that have the relevant shards of the documents requested in the query</li>
+					<li>Each database server processes and sends the result to load balancer</li>
+					<li>Load balancer aggregates and sends the result back to user</li>
+				</ol>
+
+				<p><b>Filtering the documents</b> according to the relevance is a 2-step process:</p>
+				<ol>
+					<li>Phase 1: A <b>fast, potentially cheap algorithm such as Page Rank</b> is applied to generate a list of potentially relevant candidates</li>
+					<li>Phase 2: A <b>more expensive, slower algorithm is applied to the list of candidates generated in phase 1</b></li>
+				</ol>
+
+				<p>	Twitter uses open source Lucene engine for achieving all this. </p>
+				</div>
+				
+
+				<div id="early-bird">
+					<h4>Early Bird: Twitter's real time search engine</h4>
+					<p><b>Early bird processes tweets as soon as it is published.</b> It is <b>independent of fanout</b> process.	Following is how the early bird works:</p>
+					
+				<ol>
+					<li> Tweets enter the <b>ingestion pipeline</b>: Here the tweets are <b>tokenized and annotated with addtional metadata</b>(For eg, language). <b>To handle large volumes, tweets are hash partioned</b> across Early bird servers.</li>
+					<li>When a user searches for a query, <b>a Blender (front end server) parses user's query and appends user's local social graph to multiple early bird servers.</b></li>
+					<li>The query is received by each server, and <b>searching is done using Lucene.</b> After that Early bird performs <b>filtering</b> and personalization <b>based on a relevance score</b> which is calculated using:
+
+						<ul>
+							<li><b>Static signals</b> added during indexing</li>
+							<li><b>Resonance signals:</b> Dynamically updated. (For eg, no. of retweets). Resonance signals are pushed by a component called Updater.</li>
+							<li><b>Information about searcher</b>.(Location, interests, social graph)</li>
+						</ul>
+
+					</li>
+					<li>The <b>most recent and relevant tweets and filtered and returned to the blender, which merges and reranks results</b> from multiple Early bird servers.</li>
+				</ol>
+
+				<p>Notes:</p>
+				<ol>
+					<li>In production Early bird servers constantly receive requests to search, as well as requests to index simultaneously.</li>
+					<li> Early bird is completely written in Java because:
+						<ul>
+							<li>Integrating it with Lucene was necessary</li>
+							<li>Easy to understand concurrency model of Java</li>
+						</ul> 
+					</li>
+				</ol> 
+				</div>
+				
+			</div>
+
+
+			<div id="conclusion">
+			<h3>Conclusion</h3>
+			<p>In this article, we talked about how one can design twitter. Starting with <b>requirements and charactericstics</b>, we were able to identify the <b>core functional requirements</b>, and the most <b>common non functional requirements: scalability & reliability</b>. Keeping these in mind, we are able to come up with <b>high level designs, identify the painpoints, provide solutions to them.</b> We are also able to <b>justify the design decisions</b> at each step. </p>	
+
+			<p><i>Well then, until next time.</i></p>		
+			</div>
+		</div>
+		
+</body>
+
+
+
+</html>
