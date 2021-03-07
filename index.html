@@ -23,6 +23,15 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+	.icon-zoom {
+		transition: .1s;
+	}
+	.icon-zoom:hover {
+	  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+  </style>
+
 </head>
 
 
@@ -101,8 +110,17 @@
           <div class="carousel-item active" style="background-image: url('assets/img/slide/slide-1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown" style="color:black">Mehul Choksi</h2>
-                <h3 class="animate__animated animate__fadeInUp" style="color:black">Web Developer | Cloud | Dev Ops</h3>
+                <h2 class="animate__animated animate__fadeInDown" style="color:black;" >Mehul Choksi</h2>
+                <h3 class="animate__animated animate__fadeInUp">Full Stack Web Development | Cloud | Dev Ops</h3>
+		<br/><br/>
+		<center>
+			<div style="width: 30%; display:flex; justify-content:space-evenly; ">
+				<a href="https://github.com/mehul-choksi" target="_blank"><img src="assets/img/github.png" height="40px" width="40px" class="icon-zoom"></a>
+				<a href="https://leetcode.com/mehul_choksi/" target="_blank"><img src="assets/img/leetcode.jpg" height="40px" width="36px" style="border-radius: 10px;" class="icon-zoom"></a>
+				<a href="https://www.linkedin.com/in/mehul-choksi-70b606184/" target="_blank"><img src="assets/img/linkedin.png" height="40px" width="40px" class="icon-zoom"></a>
+				<a href="mailto:mehul.choksi98@gmail.com" target="_blank"><img src="assets/img/mail.png" height="50px", width="50px" style="margin-top: -5px;" class="icon-zoom"></a>
+			</div>
+		</center>
               </div>
             </div>
           </div>
@@ -118,15 +136,15 @@
   <main id="main">
 
     <section>
-		<div class="container" style="overflow: visible;">
+		<div class="container" style="display:flex; flex-wrap: wrap;">
 			<div class="row">
 				<div style="float:left;padding:30px;width:40%;">
 				<img src="assets/img/profile_pic.png" width="200px" height="200px" style="border-radius:20px;">
 				</div>
 
-				<div style="float:right;padding:30px;width:50%;">
+				<div style="float:right;padding:30px;width:50%; margin-left: 2em;">
 				<h3>About Me</h3>
-				<p>Hi! I am a Comp Science Grad from PICT, Pune. During my graduation, I developed applications in web development, parsing, chatbots and sentiment analysis through which I have gained valuable experience. My interests lie in fullstack web development & cloud.</p>
+				<p>Hi! I am a Comp Science Grad from PICT, Pune. During my graduation, I developed applications in web development, parsing, chatbots and sentiment analysis through which I have gained valuable experience. My interests lie in fullstack web development &amp; cloud.</p>
 				<p>Aside from programming, I also like to eagerly learn new things and write about them.</p>
 				</div>
 			</div>
@@ -137,45 +155,78 @@
 
 	<section class="about-lists">
       <div class="container">
-		<div class="section-title">
-		  <h2>Skills</h2>
-		</div>
-        <div class="row no-gutters">
+	<div class="section-title">
+	  <h2>Skills</h2>
+	</div>
+        <div class="row no-gutters" style="color: #000080;">
 
            <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
-            <span>01</span>
-            <center><img src="assets/img/java.png" height="100px" width="100px"></center>
-            <center><p>Spring Boot, Maven</p></center>
+            <span style="margin: 30px;">Programming Languages</span>
+            <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 10px;">
+		<img src="assets/img/java-1.png" height="50px" width="50px">
+		<img src="assets/img/python.png" height="50px" width="50px">
+		<img src="assets/img/c-plus-plus.png" height="50px" width="50px">
+		<img src="assets/img/javascript.png" height="50px" width="50px">
+	    </div>
+           
+	   <center><p style="margin-top:40px;">Java, Python, C++, Javascript</p></center>
+            
           </div>
 
           <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
-            <span>02</span>
-            <center><img src="assets/img/python.png" height="100px" width="100px"></center>
-            <center><p>Flask,SpaCy</p></center>
+            <span style="margin: 30px;">Front End</span>
+            <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 10px;">
+		<img src="assets/img/react.png" height="50px" width="50px">
+		<img src="assets/img/angular.png" height="50px" width="50px">
+		<img src="assets/img/material.png" height="50px" width="50px">
+		<img src="assets/img/bootstrap.png" height="40px" width="40px" style="margin-top: 5px;">
+		<img src="assets/img/html5.png" height="50px" width="50px">
+		<img src="assets/img/css3.png" height="50px" width="50px">
+	    </div>
+
+	   <center><p>React, Angular, MaterialUI, Bootstrap, Html5, Css3</p></center>
+          </div>
+
+           <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
+
+            <span style="margin: 30px;">Back End</span>
+
+            <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 10px;">
+		<img src= "assets/img/nodejs.png" height="50px" width="50px">
+		<img src="assets/img/springboot.png" height="50px" width="50px">
+		<img src="assets/img/flask.png" height="40px" width="40px">
+	    </div>
+
+  	   	<center><p style="margin-top:50px;">Node js - express Js, Spring Boot, Flask</p></center>
+
           </div>
 
           <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
-            <span>03</span>
-            <center><img src="assets/img/nodejs.png" height="100px" width="100px"></center>
-            <center><p>Express JS</p><center>
+            <span style="margin: 30px;">Databases</span>
+            <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 10px;">
+		<img src="assets/img/mysql.png" height="50px" width="50px">
+		<img src="assets/img/mongodb.png" height="60px" width="60px">
+	    </div>
+		<center><p style="margin-top:40px;">MySQL, MongoDB</p></center>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
-            <span>04</span>
-            <center><img src="assets/img/react.png" height="100px" width="100px"></center>
-            <center><p>Classful,Classes,Hooks,Context</p></center>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" >
-            <span>05</span>
-            <center><img src="assets/img/db.png" height="100px" width="100px"></center>
-            <center><p>MySQL, Mongo</p></center>
+            <span style="margin: 30px;">Devops & Cloud</span>
+            <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 10px;">
+		<img src="assets/img/aws.png" height="50px" width="50px">
+		<img src="assets/img/git.png" height="50px" width="50px">
+		<img src="assets/img/docker.png" height="50px" width="50px">
+	    </div>
+		<center><p style="margin-top:40px;">AWS, Git, Docker</p></center>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item aos-init aos-animate">
-            <span>06</span>
-            <center><img src="assets/img/aws.png" height="100px" width="100px"></center>
-            <center><p>EC2, ELB, EBS, Lambda</p></center>
+            <span style="margin: 30px;">Communcation</span>
+            <ul>
+		<li>English　- Fluent</li><br/>
+		<li>Hindi (हिन्दी) - Fluent</li><br/>
+		<li>Japanese (日本語）- Intermediate</li><br/>
+	    </ul>
           </div>
 
         </div>
